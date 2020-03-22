@@ -70,7 +70,13 @@ while running:
                 img = img0 
                 scale = 1
                 angle = 0
+            
+            elif event.key == K_1 or event.key == K_KP1:
+                img = pygame.transform.laplacian(img)
 
+            elif event.key == K_2 or event.key == K_KP2:
+                img = pygame.transform.scale2x(img)
+                
             rect = img.get_rect()
             rect.center = screenCenter
 
